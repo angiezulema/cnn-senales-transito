@@ -1,0 +1,14 @@
+# HU11 - Dependencias de la interfaz Streamlit
+# Python recomendado: 3.10 - 3.13
+#
+# Instalación local:
+#   py -3.13 -m venv .venv
+#   .venv\Scripts\activate
+#   pip install -r requirements.txt
+
+# Versión fijada: la UI usa width= en st.button/st.dataframe (>=1.49) y se
+# validó localmente con 1.66.1.
+streamlit==1.66.1
+requests>=2.31,<3.0
+Pillow>=10.0
+pandas>=2.0

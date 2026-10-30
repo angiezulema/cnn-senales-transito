@@ -1,0 +1,15 @@
+# HU10 - Dependencias de la API FastAPI
+# Python recomendado: 3.10 - 3.13 (TensorFlow no soporta 3.14)
+#
+# Instalación:
+#   py -3.13 -m venv .venv
+#   .venv\Scripts\activate
+#   pip install -r requirements.txt
+
+fastapi>=0.110,<1.0
+uvicorn[standard]>=0.29,<1.0
+tensorflow>=2.19,<2.22
+pillow>=10.0
+python-multipart>=0.0.9
+numpy>=1.24,<3
+pyyaml>=6.0

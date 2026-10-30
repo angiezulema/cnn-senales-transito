@@ -1,0 +1,19 @@
+[00:34:58] Random search: 8 trials, epochs=8, patience=3, seed=42
+[00:34:58] Raices de datos: ['C:\\Users\\angie\\Downloads\\nuevo_he6\\nuevo_he6\\Nueva carpeta\\traffic-sign-cnn\\data', 'C:\\Users\\angie\\Downloads\\HU03']
+[00:34:58] (1/8) E00_baseline: iniciando
+[00:40:15] (1/8) E00_baseline: val_acc=0.9812 f1=0.9791 t=5.0m
+[00:40:15] (2/8) E01_rnd: iniciando
+[00:45:34] (2/8) E01_rnd: val_acc=0.9933 f1=0.9916 t=5.2m
+[00:45:34] (3/8) E02_rnd: iniciando
+[00:50:32] (3/8) E02_rnd: val_acc=0.9818 f1=0.9795 t=4.9m
+[00:50:32] (4/8) E03_rnd: iniciando
+[00:55:28] (4/8) E03_rnd: val_acc=0.9688 f1=0.9712 t=4.8m
+[00:55:28] (5/8) E04_rnd: iniciando
+[01:00:10] (5/8) E04_rnd: val_acc=0.9585 f1=0.9656 t=4.6m
+[01:00:10] (6/8) E05_rnd: iniciando
+[01:04:42] (6/8) E05_rnd: val_acc=0.9747 f1=0.9791 t=4.5m
+[01:04:42] (7/8) E06_rnd: iniciando
+[01:09:01] (7/8) E06_rnd: val_acc=0.9672 f1=0.9695 t=4.2m
+[01:09:01] (8/8) E07_rnd: iniciando
+[01:13:14] (8/8) E07_rnd: val_acc=0.9697 f1=0.9701 t=4.2m
+[01:13:14] Busqueda finalizada en 38.3 min. Mejor: E01_rnd val_acc=0.9933. Config: C:\Users\angie\Downloads\nuevo_he6\nuevo_he6\Nueva carpeta\traffic-sign-cnn\HU07\results\best_config.json

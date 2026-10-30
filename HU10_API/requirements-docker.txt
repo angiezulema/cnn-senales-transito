@@ -1,0 +1,11 @@
+# HU11 - Dependencias de la API para la imagen Docker (Linux, CPU).
+# Se usa tensorflow-cpu para evitar arrastrar bibliotecas CUDA innecesarias.
+# Python base: 3.12 (ver HU10_API/Dockerfile).
+
+fastapi>=0.110,<1.0
+uvicorn[standard]>=0.29,<1.0
+tensorflow-cpu>=2.19,<2.22
+pillow>=10.0
+python-multipart>=0.0.9
+numpy>=1.24,<3
+pyyaml>=6.0

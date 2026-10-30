@@ -1,0 +1,64 @@
+# HU11 - Orquestación de la API (HU10) y la interfaz Streamlit (HU11).
+#
+# Uso:
+#   docker compose up --build -d
+#   docker compose ps
+#   docker compose logs -f
+#   docker compose down
+#
+# URLs locales:
+#   Streamlit: http://127.0.0.1:8501
+#   API:       http://127.0.0.1:8000/docs
+#
+# La API se expone solo en localhost. La UI la consume por la red interna
+# usando el nombre de servicio "api".
+
+name: hu11-traffic-sign
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: HU10_API/Dockerfile
+    image: hu11-traffic-api:1.0.0
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      TF_CPP_MIN_LOG_LEVEL: "2"
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health')
+      interval: 30s
+      timeout: 10s
+      start_period: 90s
+      retries: 5
+    restart: unless-stopped
+
+  ui:
+    build:
+      context: .
+      dockerfile: HU11_UI/Dockerfile
+    image: hu11-traffic-ui:1.0.0
+    ports:
+      - "127.0.0.1:8501:8501"
+    environment:
+      API_URL: http://api:8000
+      API_TIMEOUT: "30"
+      MAX_UPLOAD_MB: "10"
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - import urllib.request; urllib.request.urlopen('http://127.0.0.1:8501/_stcore/health')
+      interval: 30s
+      timeout: 10s
+      start_period: 20s
+      retries: 5
+    restart: unless-stopped

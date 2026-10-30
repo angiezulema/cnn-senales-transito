@@ -1,0 +1,55 @@
+# HU07 — Configuracion base (replica de HU06 como punto de partida)
+# Todos los valores pueden sobrescribirse por CLI con --override clave=valor
+
+seed: 42
+
+# Imagen y clases
+img_height: 32
+img_width: 32
+img_channels: 3
+num_classes: 43
+
+# Entrenamiento
+batch_size: 64
+epochs: 50
+learning_rate: 0.001
+optimizer: adam            # adam | adamw
+weight_decay: 0.0          # solo aplica a adamw
+label_smoothing: 0.0
+
+# Arquitectura
+conv_filters: [32, 64, 128]
+dense_units: 512
+dropout_conv: 0.25
+dropout_dense: 0.5
+
+# Callbacks
+early_stopping:
+  monitor: val_accuracy
+  patience: 7
+  min_delta: 0.0001
+reduce_lr:
+  monitor: val_loss
+  factor: 0.5
+  patience: 3
+  min_lr: 0.000001
+
+# Datos
+data:
+  # Rutas relativas a la raiz del proyecto (traffic-sign-cnn/)
+  csv_train: data/train_aumentado.csv
+  csv_val: data/val.csv
+  csv_test: data/test.csv
+  # Raices adicionales donde buscar imagenes originales GTSRB.
+  # Ejemplo: "C:/Users/usuario/Downloads/HU03" si contiene archive/Train
+  extra_roots: []
+  use_cache: true
+
+# Reproducibilidad / rendimiento
+# Ajustado por benchmark HU07 en Ryzen 5 5500H (4C/8T):
+#   batch 128 + intra_threads=4 fue lo mas rapido (~40 s/epoca en 12k/4k,
+#   ~2 min/epoca en el dataset completo). XLA (jit_compile) resulto mas lento.
+deterministic: false
+intra_threads: 4            # hilos intra-operacion (CPU)
+inter_threads: 1
+jit_compile: false          # XLA medido mas lento en este CPU; dejar en false

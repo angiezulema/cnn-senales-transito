@@ -1,0 +1,56 @@
+{
+  "seed": 42,
+  "img_height": 32,
+  "img_width": 32,
+  "img_channels": 3,
+  "num_classes": 43,
+  "batch_size": 32,
+  "epochs": 8,
+  "learning_rate": 0.001,
+  "optimizer": "adam",
+  "weight_decay": 0.0,
+  "label_smoothing": 0.0,
+  "conv_filters": [
+    32,
+    64,
+    128
+  ],
+  "dense_units": 512,
+  "dropout_conv": 0.2,
+  "dropout_dense": 0.6,
+  "early_stopping": {
+    "monitor": "val_accuracy",
+    "patience": 3,
+    "min_delta": 0.0001
+  },
+  "reduce_lr": {
+    "monitor": "val_loss",
+    "factor": 0.5,
+    "patience": 3,
+    "min_lr": 1e-06
+  },
+  "data": {
+    "csv_train": "data/train_aumentado.csv",
+    "csv_val": "data/val.csv",
+    "csv_test": "data/test.csv",
+    "extra_roots": [
+      "C:\\Users\\angie\\Downloads\\nuevo_he6\\nuevo_he6\\Nueva carpeta\\traffic-sign-cnn\\data",
+      "C:\\Users\\angie\\Downloads\\HU03"
+    ],
+    "use_cache": true
+  },
+  "deterministic": false,
+  "intra_threads": 4,
+  "inter_threads": 1,
+  "jit_compile": false,
+  "_meta": {
+    "selected_from": "E01_rnd",
+    "criterion": "best val_accuracy, tie-break val_f1_macro then training_time",
+    "val_accuracy": 0.9932500123977661,
+    "val_f1_macro": 0.9915927705235129,
+    "val_loss": 0.027117598801851273,
+    "search_trials": 8,
+    "search_epochs": 8,
+    "generated_at": "2026-10-23T01:13:14"
+  }
+}

@@ -1,0 +1,12 @@
+# Espacio de busqueda para random search (HU07)
+# Cada clave es un hiperparametro y su valor una lista de opciones.
+# Los valores se muestrean de forma independiente.
+
+learning_rate: [0.0003, 0.0005, 0.001]
+batch_size: [32, 64, 128]
+dropout_conv: [0.20, 0.25, 0.30]
+dropout_dense: [0.40, 0.50, 0.60]
+dense_units: [256, 512]
+optimizer: [adam, adamw]
+weight_decay: [0.0001]
+label_smoothing: [0.0, 0.05]

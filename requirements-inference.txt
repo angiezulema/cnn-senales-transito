@@ -1,0 +1,10 @@
+# Dependencias minimas para servir el modelo exportado (HU08)
+# Sin TensorFlow completo si se usa TFLite Runtime:
+tflite-runtime>=2.14; platform_system != "Windows"
+tensorflow>=2.19,<2.22; platform_system == "Windows"
+
+numpy>=1.24,<3
+Pillow>=10.0
+fastapi>=0.110
+uvicorn[standard]>=0.29
+python-multipart>=0.0.9

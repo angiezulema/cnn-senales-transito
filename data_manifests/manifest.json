@@ -1,0 +1,44 @@
+{
+  "generated_at": "2026-10-23T00:18:32",
+  "project_root": "C:\\Users\\angie\\Downloads\\nuevo_he6\\nuevo_he6\\Nueva carpeta\\traffic-sign-cnn",
+  "data_roots": [
+    "C:\\Users\\angie\\Downloads\\nuevo_he6\\nuevo_he6\\Nueva carpeta\\traffic-sign-cnn\\data",
+    "C:\\Users\\angie\\Downloads\\HU03"
+  ],
+  "note": "Solo se copian los CSV; las imagenes permanecen en su ubicacion.",
+  "files": [
+    {
+      "partition": "csv_train",
+      "source": "C:\\Users\\angie\\Downloads\\nuevo_he6\\nuevo_he6\\Nueva carpeta\\traffic-sign-cnn\\data\\train_aumentado.csv",
+      "manifest": "C:\\Users\\angie\\Downloads\\nuevo_he6\\nuevo_he6\\Nueva carpeta\\traffic-sign-cnn\\HU07\\data_manifests\\train_aumentado.csv",
+      "rows": 38616,
+      "sha256": "78931827ce6d253f9827e84702918ef17ed4e5fb5a92807b54fbe28d06210af5",
+      "sample_images_found": "100/100",
+      "classes": 43,
+      "min_per_class": 194,
+      "max_per_class": 2202
+    },
+    {
+      "partition": "csv_val",
+      "source": "C:\\Users\\angie\\Downloads\\nuevo_he6\\nuevo_he6\\Nueva carpeta\\traffic-sign-cnn\\data\\val.csv",
+      "manifest": "C:\\Users\\angie\\Downloads\\nuevo_he6\\nuevo_he6\\Nueva carpeta\\traffic-sign-cnn\\HU07\\data_manifests\\val.csv",
+      "rows": 7842,
+      "sha256": "7d6cd942f5f5ab38491372b649336cbbc1935132c1758a110448b3d9184c2744",
+      "sample_images_found": "100/100",
+      "classes": 43,
+      "min_per_class": 42,
+      "max_per_class": 450
+    },
+    {
+      "partition": "csv_test",
+      "source": "C:\\Users\\angie\\Downloads\\nuevo_he6\\nuevo_he6\\Nueva carpeta\\traffic-sign-cnn\\data\\test.csv",
+      "manifest": "C:\\Users\\angie\\Downloads\\nuevo_he6\\nuevo_he6\\Nueva carpeta\\traffic-sign-cnn\\HU07\\data_manifests\\test.csv",
+      "rows": 12630,
+      "sha256": "f7c0db229d2bbc1c1fa7b7785b89ff268b5a4899311f6ef1770373d2a38954da",
+      "sample_images_found": "100/100",
+      "classes": 43,
+      "min_per_class": 60,
+      "max_per_class": 750
+    }
+  ]
+}
