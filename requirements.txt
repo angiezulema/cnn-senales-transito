@@ -3,10 +3,12 @@
 #
 # Instalacion:
 #   py -3.13 -m venv .venv
-#   .venv\Scripts\activate
+#   .venv\Scriptsctivate
 #   pip install -r requirements.txt
 
-tensorflow>=2.19,<2.22
+# TensorFlow 2.16-2.21 compatible con Python 3.10-3.13
+# Python 3.14 no es compatible - Render debe usar Python 3.13
+tensorflow>=2.16,<2.22
 numpy>=1.24,<3
 pandas>=2.0
 matplotlib>=3.7
